@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Goals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Goal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_goals.each do |user_goal| %>
+      <tr>
+        <td><%= user_goal.user_id %></td>
+        <td><%= user_goal.goal_id %></td>
+        <td><%= link_to 'Show', user_goal %></td>
+        <td><%= link_to 'Edit', edit_user_goal_path(user_goal) %></td>
+        <td><%= link_to 'Destroy', user_goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Goal', new_user_goal_path %>
