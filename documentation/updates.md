@@ -1,4 +1,5 @@
-#####Web-palvelinohjelmointi Ruby on Rails, kevät 2017
+Web-palvelinohjelmointi Ruby on Rails, kevät 2017
+------
 
 `by Sonja Mäkipaja`
 
