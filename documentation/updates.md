@@ -3,7 +3,7 @@ Web-palvelinohjelmointi Ruby on Rails, kevät 2017
 
 `by Sonja Mäkipaja`
 
-##Updates
+# Updates
 When | What | Time spent
 --------------- | ----- | -----
 14.03.2017 | Github repo created and documentation base started. | 1h
