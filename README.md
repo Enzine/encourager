@@ -1,4 +1,4 @@
-# encourager [![Build Status](https://travis-ci.org/Enzine/encourager.svg?branch=master)](https://travis-ci.org/Enzine/encourager)
+# encourager [![Build Status](https://travis-ci.org/Enzine/encourager.svg?branch=master)](https://travis-ci.org/Enzine/encourager) [![Code Climate](https://codeclimate.com/github/Enzine/ratebeer/badges/gpa.svg)](https://codeclimate.com/github/Enzine/ratebeer)
 
 [What is Encourager?](https://github.com/Enzine/encourager/blob/master/documentation/whatis.md) |
 [How to use Encourager?](https://github.com/Enzine/encourager/blob/master/documentation/howtouse.md) |
