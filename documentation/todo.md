@@ -3,8 +3,11 @@ things to do...
 ~~Heroku~~
 
 ~~Travis and testing environment~~
+
 ~~CodeClimate~~
+
 ~~Codacy~~
+
 ~~Coveralls~~
 1. simplecov-gem
 
