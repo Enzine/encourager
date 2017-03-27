@@ -3,9 +3,10 @@ things to do...
 ~~Heroku~~
 
 ~~Travis and testing environment~~
-1. CodeClimate.
-2. simplecov-gem
-3. Coveralls.
+~~CodeClimate~~
+~~Codacy~~
+1. simplecov-gem
+2. Coveralls.
 
 1. Registration.
 2. User-UserGoal-Goal -relation.
