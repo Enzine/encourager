@@ -5,8 +5,9 @@ things to do...
 ~~Travis and testing environment~~
 ~~CodeClimate~~
 ~~Codacy~~
+~~Coveralls~~
 1. simplecov-gem
-2. Coveralls.
+
 
 1. Registration.
 2. User-UserGoal-Goal -relation.
