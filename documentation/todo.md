@@ -1,6 +1,7 @@
 things to do...
 
 ~~Heroku~~
+
 ~~Travis and testing environment~~
 1. CodeClimate.
 2. simplecov-gem
