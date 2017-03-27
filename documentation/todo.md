@@ -1,7 +1,7 @@
 things to do...
 
 _*. Heroku._
-1. Travis.
+1. Travis and testing environment.
 2. CodeClimate.
 3. simplecov-gem
 4. Coveralls.
