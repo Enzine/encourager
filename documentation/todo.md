@@ -1,6 +1,6 @@
 things to do...
 
-_*. Heroku._
+_Heroku_
 1. Travis and testing environment.
 2. CodeClimate.
 3. simplecov-gem
