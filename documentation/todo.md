@@ -9,8 +9,7 @@ things to do...
 ~~Codacy~~
 
 ~~Coveralls~~
-1. simplecov-gem
-
+simplecov-gem?
 
 1. Registration.
 2. User-UserGoal-Goal -relation.
