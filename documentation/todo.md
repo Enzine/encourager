@@ -10,10 +10,11 @@ things to do...
 
 ~~Coveralls~~
 
+~~Registration~~
+
 simplecov-gem
 
-1. Registration.
-2. User-UserGoal-Goal -relation.
-3. validations?
-4. Authorised access.
-5. Only users can add/destroy goals.
+1. User-UserGoal-Goal -relation.
+2. validations?
+3. Authorised access.
+4. Only users can add/destroy goals.

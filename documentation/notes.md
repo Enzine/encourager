@@ -6,7 +6,7 @@ Vapaavalintainen Rails-sovellus, joka oletusarvoisesti sisältää
 
 sisältää vähintään 4 tietokantataulua
 <del>mielellään sekä oneToMany- että manyToMany-yhteyksiä</del>
-sisältää käyttäjän kirjautumisen tai session käytön jollain muulla mielekkäällä tavalla
+<del>sisältää käyttäjän kirjautumisen tai session käytön jollain muulla mielekkäällä tavalla</del>
 jonkun verran testejä
 <del>koodi githubissa</del>
 <del>deployattuna herokuun tai vastaavaan</del>
