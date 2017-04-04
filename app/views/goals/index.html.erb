@@ -15,17 +15,19 @@
   <tbody>
     <% @goals.each do |goal| %>
       <tr>
-        <td><%= goal.name %></td>
+        <td><%= link_to goal.name, goal %></td>
         <td><%= goal.score %></td>
         <td><%= goal.description %></td>
-        <td><%= link_to 'Show', goal %></td>
-        <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-        <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% unless session[:user_id] == nil %>
+          <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
+          <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Goal', new_goal_path %>
+<% unless session[:user_id] == nil %>
+  <%= link_to 'New Goal', new_goal_path %>
+<% end %>

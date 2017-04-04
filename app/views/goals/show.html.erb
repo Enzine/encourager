@@ -15,5 +15,7 @@
   <%= @goal.description %>
 </p>
 
-<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<% unless session[:user_id] == nil %>
+  <%= link_to 'Edit', edit_goal_path(@goal) %> |
+<% end %>
 <%= link_to 'Back', goals_path %>

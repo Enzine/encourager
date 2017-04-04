@@ -5,4 +5,7 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  has_many :user_goals, dependent: :destroy
+  has_many :goals, through: :user_goals
+
 end

@@ -12,9 +12,11 @@ things to do...
 
 ~~Registration~~
 
-simplecov-gem
+~~User-UserGoal-Goal -relation.~~
 
-1. User-UserGoal-Goal -relation.
-2. validations?
+~~validations~~
+
+1. Users can add goals to themselves.
+2. Only users can add/destroy goals.
 3. Authorised access.
-4. Only users can add/destroy goals.
+4. simplecov-gem and first tests.

@@ -11,4 +11,5 @@ When | What | Time spent
 19.03.2017 | Fighting with Heroku sqlite3/pg, still not working... | 2,5h
 25.03.2017 | Heroku finally up! Problem was with .bundle/config. Added .bundle directory to .gitignore. | 30min
 27.03.2017 | .gitignore update, studied what is Travis CI, added badges for Travis, Codecy, Coveralls and CodeClimate (lol) to README.md | 1,5h
-30.03.2017 | Registration done with secure passwords and sessions. Dealt with some issues. Simple navibar added. Some gems added to Gemfile. | 3,5h
+30.03.2017 | Registration done with "secure" passwords and sessions. Dealt with some issues. Simple navibar added. Some gems added to Gemfile. | 3,5h
+03.04.2017 | User-UserGoal-Goal relationships defined. Worked with Goal validations & form. Worked with users' and goals' html-files. | 1h

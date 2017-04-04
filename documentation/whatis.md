@@ -24,6 +24,9 @@ Activity/Goal
 User
 - username:string
 
+UserGoal
+- new usergoal is created when a user adds a goal to her goals
+
 Achievement
 - name:string
 - score:integer (needed points)
