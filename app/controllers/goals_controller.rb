@@ -64,14 +64,14 @@ class GoalsController < ApplicationController
 
   def check
     @user_goal = UserGoal.new
-    @user_goal.goal_id = @goal.id
     @user_goal.user_id = current_user.id
+    @user_goal.goal_id = params[:goal_id]
 
     respond_to do |format|
       if @user_goal.save
-        format.html { redirect_to @goals, notice: 'Goal was successfully added to your goals.'
+        format.html { redirect_to goals_path, notice: 'Goal was successfully added to your goals.' }
       else
-        format.html { render :nothing => true }
+        format.html { render :nothing => true, notice: "Not legit" }
         format.json { render json: @user_goal.errors, status: :unprocessable_entity }
       end
     end

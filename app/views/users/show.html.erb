@@ -5,7 +5,12 @@
 <b><u>Account information</u></b><br>
 <b>Username:</b> <%= @user.username %><br>
 <b>Points:</b> 0<br>
-<b>Recent goals:</b><br><br>
+<b>Goals:</b><br>
+<% @user.goals.each do |goal| %>
+  <%= goal.name %> | <%= goal.score %> <%= link_to 'remove', UserGoal.find_by(goal_id: goal.id, user: current_user), method: :delete, data: { confirm: 'Are you sure?' } %><br>
+<% end %>
+<b>Total score:</b> <%= @user.score %>
+<br><br>
 
 <% if current_user == @user %>
   <%= link_to 'Edit', edit_user_path(@user) %> |

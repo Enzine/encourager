@@ -56,7 +56,7 @@ class UserGoalsController < ApplicationController
   def destroy
     @user_goal.destroy
     respond_to do |format|
-      format.html { redirect_to user_goals_url, notice: 'User goal was successfully destroyed.' }
+      format.html { redirect_to current_user, notice: 'Your goal was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

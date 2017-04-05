@@ -1,4 +1,4 @@
 class UserGoal < ApplicationRecord
-  belongs_to :users
-  belongs_to :goals
+  belongs_to :user
+  belongs_to :goal
 end

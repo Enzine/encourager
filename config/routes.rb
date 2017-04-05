@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :user_goals
   resources :goals
+  post 'check', to: 'goals#check'
   root 'users#index'
   resources :users
 
