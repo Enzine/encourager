@@ -6,7 +6,7 @@
 <b>Username:</b> <%= @user.username %><br>
 <b>Points:</b> 0<br>
 <b>Goals:</b><br>
-<% @user.goals.sort_by{|goal| goal.score}.each do |goal| %>
+<% @user.goals.each do |goal| %>
   <%= goal.name %> | <%= goal.score %>
   <% if current_user %>
     <%= link_to 'remove', UserGoal.find_by(goal_id: goal.id, user: current_user), method: :delete, data: { confirm: 'Are you sure?' } %>
