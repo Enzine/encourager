@@ -4,7 +4,7 @@
 
 <b><u>Account information</u></b><br>
 <b>Username:</b> <%= @user.username %><br>
-<b>Total score:</b> <%= @user.score %>
+<b>Total score:</b> <%= @user.score %><br>
 <b>Recent goals:</b><br>
 <% @user.user_goals.sort_by{|ug| ug.created_at }.reverse.take(5).each do |user_goal| %>
   <%= user_goal.goal.name %>, <%= user_goal.created_at.strftime("%d %b. %Y") %>
