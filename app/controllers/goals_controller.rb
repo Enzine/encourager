@@ -69,11 +69,10 @@ class GoalsController < ApplicationController
 
     respond_to do |format|
       if @user_goal.save
-        format.html { redirect_to @goals, notice: 'Goal was successfully added to your goals.' }
-        format.json { render :show, status: :created, location: @goal }
+        format.html { redirect_to @goals, notice: 'Goal was successfully added to your goals.'
       else
-        format.html { redirect_to @goals, error: 'Something went wrong.'}
-        format.json { render json: @goal.errors, status: :unprocessable_entity }
+        format.html { render :nothing => true }
+        format.json { render json: @user_goal.errors, status: :unprocessable_entity }
       end
     end
   end
