@@ -19,6 +19,7 @@
         <td><%= goal.score %></td>
         <td><%= goal.description %></td>
         <% unless session[:user_id] == nil %>
+          <td><%= link_to 'Check', new_user_goal_path %></td>
           <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
           <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>

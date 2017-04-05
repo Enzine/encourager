@@ -13,3 +13,4 @@ When | What | Time spent
 27.03.2017 | .gitignore update, studied what is Travis CI, added badges for Travis, Codecy, Coveralls and CodeClimate (lol) to README.md | 1,5h
 30.03.2017 | Registration done with "secure" passwords and sessions. Dealt with some issues. Simple navibar added. Some gems added to Gemfile. | 3,5h
 03.04.2017 | User-UserGoal-Goal relationships defined. Worked with Goal validations & form. Worked with users' and goals' html-files. | 1h
+05.04.2017 | Tried to learn how a user could add a goal to his/her profile. I chose to create a method named 'check' to GoalsController. | 2h

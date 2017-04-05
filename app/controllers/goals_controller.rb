@@ -62,6 +62,22 @@ class GoalsController < ApplicationController
     end
   end
 
+  def check
+    @user_goal = UserGoal.new
+    @user_goal.goal_id = @goal.id
+    @user_goal.user_id = current_user.id
+
+    respond_to do |format|
+      if @user_goal.save
+        format.html { redirect_to @goals, notice: 'Goal was successfully added to your goals.' }
+        format.json { render :show, status: :created, location: @goal }
+      else
+        format.html { redirect_to @goals, error: 'Something went wrong.'}
+        format.json { render json: @goal.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_goal
