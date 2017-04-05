@@ -5,12 +5,12 @@
 <b><u>Account information</u></b><br>
 <b>Username:</b> <%= @user.username %><br>
 <b>Points:</b> 0<br>
-<b>Goals:</b><br>
-<% @user.user_goals.each do |user_goal| %>
-  <%= user_goal.goal.name %> | <%= user_goal.goal.score %>
+<b>Recent goals:</b><br>
+<% @user.user_goals.sort_by{|ug| ug.created_at }.reverse.take(5).each do |user_goal| %>
+  <%= user_goal.goal.name %>, <%= user_goal.created_at.strftime("%d %b. %Y") %>
   <% if current_user %>
     <%= link_to 'remove', user_goal, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %><br>
+  <% end %> (<%= user_goal.goal.score %> points)<br>
 <% end %>
 <b>Total score:</b> <%= @user.score %>
 <br><br>
