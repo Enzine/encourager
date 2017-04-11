@@ -22,6 +22,9 @@ end
 # For coveralls.io (testing line coverage)
 gem 'coveralls', require: false
 
+# For Foundation Framework
+gem 'foundation-rails'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

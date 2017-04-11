@@ -1,24 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Encourager</title>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title><%= content_for?(:title) ? yield(:title) : "Encourager" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <div class="navibar">
-      <%= link_to 'users', users_path %> |
-      <%= link_to 'goals', goals_path %> |
-      <% if current_user %>
-        <%= link_to current_user.username, current_user %> | <%= link_to 'logout', logout_path, method: :delete %> |
-      <% else %>
-        <%= link_to 'login', login_path %> |
-        <%= link_to 'register', new_user_path %>
-      <% end %>
-      </div>
+		<button class="menu-icon" type="button" data-toggle></button>
+    <div class="top-bar" id="navigation-menu">
+    	<div class="top-bar-right">
+    		<ul class="menu">
+          <% if current_user.nil? %>
+    			  <li class="menu-text"><%= link_to 'Register', new_user_path %></li>
+        	  <li class="menu-text"><%= link_to 'Login', login_path %></li>
+          <% else %>
+            <li class="menu-text"><%= link_to 'Logout', logout_path, method: :delete %></li>
+          <% end %>
+    		</ul>
+    	</div>
+    	<div class="top-bar-left">
+    		<ul class="menu">
+    			<li class="menu-text"><%= link_to 'Start page', root_path %></li>
+    			<li class="menu-text"><%= link_to 'Users', users_path %></li>
+          <li class="menu-text"><%= link_to 'Goals', goals_path %></li>
+    		</ul>
+    	</div>
+    </div>
+
     <%= yield %>
+
+    <%= javascript_include_tag "application" %>
+
   </body>
 </html>
