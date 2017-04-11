@@ -1,21 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @goal.name %>
-</p>
+<h3><%= @goal.name %></h3>
+<strong>Awailable points:</strong><%= @goal.score %><br><br>
+<strong>Description:</strong><br>
+<%= @goal.description %><br><br>
 
-<p>
-  <strong>Score:</strong>
-  <%= @goal.score %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @goal.description %>
-</p>
 
 <% unless session[:user_id] == nil %>
-  <%= link_to 'Edit', edit_goal_path(@goal) %> |
+  <%= link_to 'Edit Goal', edit_goal_path(@goal), class: 'button alert' %>
 <% end %>
-<%= link_to 'Back', goals_path %>
+<%= link_to 'Back to Goals', goals_path, class: 'button' %>

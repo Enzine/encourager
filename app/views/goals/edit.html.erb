@@ -1,6 +1,8 @@
-<h1>Editing Goal</h1>
+<div class="row">
+  <h1>Editing Goal</h1>
 
-<%= render 'form', goal: @goal %>
+  <%= render 'form', goal: @goal %>
 
-<%= link_to 'Show', @goal %> |
-<%= link_to 'Back', goals_path %>
+  <%= link_to 'Show', @goal, class: 'button' %>
+  <%= link_to 'Back', goals_path, class: 'button' %>
+</div>

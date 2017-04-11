@@ -1,0 +1,16 @@
+<br>
+<h1 align="center">Welcome to the Encourager app!</h1>
+
+<% if current_user %>
+  <p align="center">So nice to see you again <%= current_user.username %>!<br>
+    Your Encourager is ready to motivate You.
+  </p>
+<% else %>
+  <p align="center">Encourager is created to bring us motivation and
+    inspiration through an active lifestyle. Sharing Encourager-experience
+    with friends and family will make it more enjoyable. Register FREE
+    today and begin your journey towards better results!
+  </p>
+  <h4 align="center">with Love and Respect,<br>
+    Your Encourager</h4>
+<% end %>

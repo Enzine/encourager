@@ -12,15 +12,14 @@
   <% end %>
 
   <% if @user.new_record? %>
-    <div class="row">
-      <div class="small-5">
-        <%= f.label :username %><br>
-        <%= f.text_field :username %>
-      </div>
-      <div class="small-5">
-        <%= f.label :password %><br>
-        <%= f.password_field :password %>
-      </div>
+    <div class="small-5">
+      <%= f.label :username %><br>
+      <%= f.text_field :username %>
+    </div>
+    <div class="small-5">
+      <%= f.label :password %><br>
+      <%= f.password_field :password %>
+    </div>
 
   <% else %>
     <div class="small-5">
@@ -29,12 +28,11 @@
     </div>
   <% end %>
 
-    <div class="small-5">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation  %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+  <div class="small-5">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
   </div>
 <% end %>

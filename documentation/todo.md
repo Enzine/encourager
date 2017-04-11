@@ -1,7 +1,5 @@
 things to do...
 
-~~Fix inefficient removing of userGoals.~~
-1. Prettier layout. CSS framework.
-2. simplecov-gem and first tests.
-3. Tags for searching goals.
-4. A user can add how they felt about the excercise.
+1. simplecov-gem and first tests.
+2. Tags for searching goals.
+3. A user can add how they felt about the excercise.

@@ -1,6 +1,10 @@
-<h1>Editing User</h1>
+<div class="row">
+  <br>
+  <h2>Hello <%= current_user.username %>!</h1>
+  <h3>You can change your password below.</h3>
 
-<%= render 'form', user: @user %>
+  <%= render 'form', user: @user %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', @user %>
+  <%= link_to 'Show', @user, class: 'button' %>
+  <%= link_to 'Back', @user, class: 'button' %>
+</div>
