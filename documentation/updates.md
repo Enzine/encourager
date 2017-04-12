@@ -15,3 +15,4 @@ When | What | Time spent
 03.04.2017 | User-UserGoal-Goal relationships defined. Worked with Goal validations & form. Worked with users' and goals' html-files. | 1h
 05.04.2017 | Tried to learn how a user could add a goal to his/her profile. Chose to create a method for it. Tried to make the method work. Added a list of goals to users. Added a 'remove' link next to every goal. | 4h
 11.04.2017 | Coveralls.io working (the badge), fixed some things that were wrong, set up Foundation 6 and played with Foundation Framework. Added a new home page as root instead of users. | 5h
+12.04.2017 | Working with CSS: buttons, colors, users' profile page etc. | 1,5h

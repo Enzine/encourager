@@ -20,6 +20,7 @@
     			  <li class="menu-text"><%= link_to 'Register', new_user_path %></li>
         	  <li class="menu-text"><%= link_to 'Login', login_path %></li>
           <% else %>
+            <li class="menu-text"><%= link_to current_user.username, current_user %></li>
             <li class="menu-text"><%= link_to 'Logout', logout_path, method: :delete %></li>
           <% end %>
     		</ul>

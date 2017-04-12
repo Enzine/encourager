@@ -2,6 +2,10 @@
 
 <h1>Goals</h1>
 
+<% unless session[:user_id] == nil %>
+  <%= link_to 'New Goal', new_goal_path, class: 'button' %>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -27,8 +31,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-<% unless session[:user_id] == nil %>
-  <%= link_to 'New Goal', new_goal_path, class: 'button' %>
-<% end %>

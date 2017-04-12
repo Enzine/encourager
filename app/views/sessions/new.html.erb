@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <h1>Sign in</h1>
 
-<h1>Sign in</h1>
-
-<%= form_tag session_path do %>
-  <div class="row">
-    <div class="small-5">
-      username <%= text_field_tag :username, params[:username] %>
-    </div>
-    <div class="small-5">
-      password <%= password_field_tag :password, params[:password] %>
-    </div>
-  <%= submit_tag "Log in", class: 'button secondary'%>
-  </div>
-<% end %>
+  <%= form_tag session_path do %>
+      <div class="small-5">
+        username <%= text_field_tag :username, params[:username] %>
+      </div>
+      <div class="small-5">
+        password <%= password_field_tag :password, params[:password] %>
+      </div>
+    <%= submit_tag "Log in", class: 'button'%>
+  <% end %>
+</div>

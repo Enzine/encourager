@@ -1,25 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>Registered users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
+<div class="small-5">
+  <table>
+    <thead>
       <tr>
-        <td><%= link_to user.username, user %>
+        <th>Name</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-<% if current_user.nil? %>
-  <%= link_to 'New User', new_user_path, class: 'button alert' %>
-<% end %>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to user.username, user %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
