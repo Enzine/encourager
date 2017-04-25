@@ -21,7 +21,17 @@
     <%= f.number_field :goal_id %>
   </div>
 
+  <div class="field">
+    <%= f.label :stars %>
+    <%= f.number_field :stars, in: 1..5, placeholder: "Rate your performance (1-5)" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comments %>
+    <%= f.text_field :comments, placeholder: "Comment on your performance or related feelings" %>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'button' %>
   </div>
 <% end %>

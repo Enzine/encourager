@@ -6,10 +6,10 @@
   <div class="small-4 columns">
     <h5>Recent goals:</h5>
     <% @user.user_goals.sort_by{|ug| ug.created_at }.reverse.take(5).each do |user_goal| %>
-      <%= user_goal.goal.name %>, <%= user_goal.created_at.strftime("%d %b. %Y") %>
+      <%= link_to user_goal.goal.name, user_goal_path(user_goal) %>, <%= user_goal.created_at.strftime("%d %b. %Y") %>
       <% if current_user %>
         <%= link_to 'remove', user_goal, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %> (<%= user_goal.goal.score %> points)<br>
+      <% end %> (<%= user_goal.goal.score %> points) <%= user_goal.stars %>/5<br>
     <% end %>
   </div>
   <div class="small-3 columns" align="center">

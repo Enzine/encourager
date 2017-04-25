@@ -1,5 +1,6 @@
 class UserGoalsController < ApplicationController
   before_action :set_user_goal, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_that_signed_in
 
   # GET /user_goals
   # GET /user_goals.json
@@ -69,6 +70,6 @@ class UserGoalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_goal_params
-      params.require(:user_goal).permit(:user_id, :goal_id)
+      params.require(:user_goal).permit(:user_id, :goal_id, :stars, :comments)
     end
 end

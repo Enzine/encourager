@@ -17,3 +17,4 @@ When | What | Time spent
 11.04.2017 | Coveralls.io working (the badge), fixed some things that were wrong, set up Foundation 6 and played with Foundation Framework. Added a new home page as root instead of users. | 5h
 12.04.2017 | Working with CSS: buttons, colors, users' profile page etc. | 1,5h
 17.04.2017 | Worked with tagging but due to problems had to start over. | 2h
+25.04.2017 | Comments about tasks made possible. | 2,5h
