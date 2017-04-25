@@ -53,6 +53,23 @@
 // @include motion-ui-animations;
 
 .button {
+  @if hollow {
+    border-radius: 15px;
+  }
   color: black;
   font-size: 14px;
+  font-weight: 700;
+}
+
+.card {
+  border-width: medium;
+  border-radius: 15px;
+}
+
+.top-bar {
+  border-radius: 15px;
+}
+
+h1 {
+  text-align: center;
 }

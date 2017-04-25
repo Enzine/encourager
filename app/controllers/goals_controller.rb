@@ -5,7 +5,7 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    @goals = Goal.all
+    @goals = Goal.order(:score)
   end
 
   # GET /goals/1
@@ -66,7 +66,6 @@ class GoalsController < ApplicationController
     @user_goal = UserGoal.new
     @user_goal.user_id = current_user.id
     @user_goal.goal_id = params[:goal_id]
-
     respond_to do |format|
       if @user_goal.save
         format.html { redirect_to current_user, notice: 'Goal was successfully added to your goals.' }

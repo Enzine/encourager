@@ -2,32 +2,25 @@
 
 <h1>Goals</h1>
 
-<% unless session[:user_id] == nil %>
-  <%= link_to 'New Goal', new_goal_path, class: 'button' %>
+<% if current_user %>
+  <div class="row" align="center">
+    <%= link_to 'New Goal', new_goal_path, class: 'button' %>
+  </div>
 <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Score</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @goals.sort_by{|goal| goal.score}.each do |goal| %>
-      <tr>
-        <td><%= link_to goal.name, goal %></td>
-        <td><%= goal.score %></td>
-        <td><%= goal.description %></td>
-        <% unless session[:user_id] == nil %>
-          <td><%= button_to 'Check', check_path(:goal_id => goal.id), method: :post, class: 'button hollow' %></td>
-          <td><%= link_to 'Edit', edit_goal_path(goal), class: 'button alert' %></td>
-          <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button danger' %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <% @goals.each do |goal| %>
+    <div class="small-4 columns">
+      <div class="card" align="center">
+        <div class="card-divider">
+          <%= button_to 'Check', check_path(:goal_id => goal.id), method: :post, class: 'button hollow' %>
+          <h2><%= link_to goal.name, goal %></h2>
+        </div>
+        <h1><%= goal.score %></h1>
+        <div class="card-section">
+          <%= goal.description %><br><br>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

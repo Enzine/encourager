@@ -8,5 +8,6 @@
 
 <% unless session[:user_id] == nil %>
   <%= link_to 'Edit Goal', edit_goal_path(@goal), class: 'button alert' %>
+  <%= link_to 'Destroy', @goal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button warning' %>
 <% end %>
 <%= link_to 'Back to Goals', goals_path, class: 'button' %>
