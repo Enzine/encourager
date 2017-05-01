@@ -18,3 +18,6 @@ When | What | Time spent
 12.04.2017 | Working with CSS: buttons, colors, users' profile page etc. | 1,5h
 17.04.2017 | Worked with tagging but due to problems had to start over. | 2h
 25.04.2017 | Table on goals-index changed to cards. Trying to get cards responsive. Still not happy with the results. Modified css _settings and overrides. Comments about tasks made possible. All kinds of small tuning done. | 5h
+26.04.2017 | Tried to make background image work - does not. Found scaffold.scss though and changed some things there instead. | 1h
+27.4.2017 | Planning and considering what it is I actually want from the app. | 1,5h
+***26.04.2017 | Tests, tags, background picture, prettier ui, admins can only add registrations. User can add an image. A circle around score. | 5h
