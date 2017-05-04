@@ -22,3 +22,4 @@ When | What | Time spent
 27.4.2017 | Planning and considering what it is I actually want from the app. | 1,5h
 1.5.2017 | Worked with testing, admin-priviledges and some new features. Altered forms and layout. | 4,5h
 2.5.2017 | WeatherApi and day's quote added. Also tweaked the home page ui. Familiarized with Google fonts. | 2h
+4.5.2017 | Fixed specs not-working. Issue was with cache. | 1,5h
