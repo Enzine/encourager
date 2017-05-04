@@ -1,16 +1,22 @@
 <br>
 <h1>Welcome to the Encourager app!</h1>
+<div align="center">
+  <% if current_user %>
+    <p align="center">So nice to see you again <%= current_user.username %>!<br>
+      Your Encourager is ready to motivate You.
+    </p>
+  <% else %>
+    <p>Encourager is created to bring us motivation and
+      inspiration through an active lifestyle. Sharing Encourager-experience
+      with friends and family will make it more enjoyable. Register FREE
+      today and begin your journey towards better results!
+    </p>
+    <h4>with Love and Respect,<br>
+      Your Encourager</h4>
+  <% end %>
 
-<% if current_user %>
-  <p align="center">So nice to see you again <%= current_user.username %>!<br>
-    Your Encourager is ready to motivate You.
-  </p>
-<% else %>
-  <p align="center">Encourager is created to bring us motivation and
-    inspiration through an active lifestyle. Sharing Encourager-experience
-    with friends and family will make it more enjoyable. Register FREE
-    today and begin your journey towards better results!
-  </p>
-  <h4 align="center">with Love and Respect,<br>
-    Your Encourager</h4>
-<% end %>
+  <h3>Quote of the day</h3>
+  <% q = QuoteApi.fetch_quote %>
+  <i><font size="+2">"</font><%= q.text %><font size="+2">"</font></i><br>
+  ~ <%= link_to q.author["name"], q.author["wiki"] %>
+</div>

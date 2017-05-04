@@ -6,11 +6,26 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Encourager" %></title>
 
+    <link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
+  <style>
+    textarea{width:50%}
+    input[type=text] {
+        width: 50%;
+    }
 
+    input[type=password] {
+        width: 50%;
+    }
+
+    input[type=number] {
+      width: 10%;
+    }
+  </style>
   <body>
 		<button class="menu-icon" type="button" data-toggle></button>
     <div class="top-bar" id="navigation-menu">

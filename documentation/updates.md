@@ -20,3 +20,5 @@ When | What | Time spent
 25.04.2017 | Table on goals-index changed to cards. Trying to get cards responsive. Still not happy with the results. Modified css _settings and overrides. Comments about tasks made possible. All kinds of small tuning done. | 5h
 26.04.2017 | Tried to make background image work - does not. Found scaffold.scss though and changed some things there instead. | 1h
 27.4.2017 | Planning and considering what it is I actually want from the app. | 1,5h
+1.5.2017 | Worked with testing, admin-priviledges and some new features. Altered forms and layout. | 4,5h
+2.5.2017 | WeatherApi and day's quote added. Also tweaked the home page ui. Familiarized with Google fonts. | 2h

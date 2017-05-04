@@ -1,38 +1,45 @@
-<%= form_for(user) do |f| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div align="center">
+  <%= form_for(user) do |f| %>
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+      <% if @user.new_record? %>
+
+        Username must be unique and 3..30 characters long.
+        <%= f.label 'username*' %>
+        <%= f.text_field :username %>
+
+        Password must be at least 8 characters long,<br> include both capital and downcase letters and at least one number or special character.
+        <%= f.label 'password*'%>
+        <%= f.password_field :password %>
+
+        <%= f.label 'password confirmation*' %>
+
+      <% else %>
+
+        Password must be at least 8 characters long,<br> include both capital and downcase letters and at least one number or special character.
+        <%= f.label 'new password' %>
+        <%= f.password_field :password %>
+
+        <%= f.label :password_confirmation %>
+
       <% end %>
-      </ul>
-    </div>
+
+        <%= f.password_field :password_confirmation %>
+
+        We need to know where you live to give you correct weather information.
+        <%= f.label :city %>
+        <%= f.text_field :city, placeholder: 'Where do you live?' %>
+
+        <%= f.submit class: 'button' %>
   <% end %>
-
-  <% if @user.new_record? %>
-    <div class="small-5">
-      <%= f.label :username %><br>
-      <%= f.text_field :username %>
-    </div>
-    <div class="small-5">
-      <%= f.label :password %><br>
-      <%= f.password_field :password %>
-    </div>
-
-  <% else %>
-    <div class="small-5">
-      <%= f.label 'new password' %><br>
-      <%= f.password_field :password %>
-    </div>
-  <% end %>
-
-  <div class="small-5">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation  %>
-  </div>
-  <div class="actions">
-    <%= f.submit class: 'button' %>
-  </div>
-<% end %>
+</div>

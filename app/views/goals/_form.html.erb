@@ -11,22 +11,17 @@
     </div>
   <% end %>
 
-  <div class="small-5">
-    <%= f.label :name %>
+    Give the goal a name. Name can't be blank.
+    <%= f.label 'name*' %>
     <%= f.text_field :name %>
-  </div>
 
-  <div class="small-5">
-    <%= f.label :score %>
+    Give the goal a score (1..10). Score can't be blank.
+    <%= f.label 'score*' %>
     <%= f.number_field :score, in: 1..10 %>
-  </div>
 
-  <div class="small-5">
+    Tell others about this goal.
     <%= f.label :description %>
     <%= f.text_area :description %>
-  </div>
 
-  <div class="actions">
     <%= f.submit class: 'button' %>
-  </div>
 <% end %>

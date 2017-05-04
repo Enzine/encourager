@@ -52,6 +52,9 @@ gem 'bcrypt', '~> 3.1.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# HTTP for APIs.
+gem 'httparty'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -78,6 +81,7 @@ group :development, :test do
   gem "database_cleaner"
   gem "rspec-rails"
 end
+
 group :test do
   gem "capybara"
   gem "selenium-webdriver"

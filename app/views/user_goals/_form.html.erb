@@ -1,7 +1,7 @@
 <%= form_for(user_goal) do |f| %>
   <% if user_goal.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(user_goal.errors.count, "error") %> prohibited this user_goal from being saved:</h2>
+      <h2><%= pluralize(user_goal.errors.count, "error") %> prohibited your goal from being saved:</h2>
 
       <ul>
       <% user_goal.errors.full_messages.each do |message| %>
@@ -11,27 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :goal_id %>
-    <%= f.number_field :goal_id %>
-  </div>
-
-  <div class="field">
+    Rate your performance (1-5 stars).
     <%= f.label :stars %>
-    <%= f.number_field :stars, in: 1..5, placeholder: "Rate your performance (1-5)" %>
-  </div>
+    <%= f.number_field :stars, in: 1..5 %>
 
-  <div class="field">
+    Comment on your performance or related feelings.
     <%= f.label :comments %>
-    <%= f.text_field :comments, placeholder: "Comment on your performance or related feelings" %>
-  </div>
+    <%= f.text_field :comments %>
 
-  <div class="actions">
-    <%= f.submit class: 'button' %>
-  </div>
+    <%= f.submit "Update goal", class: 'button' %>
 <% end %>

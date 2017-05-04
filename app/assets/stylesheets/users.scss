@@ -1,3 +1,24 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h1 {
+  font-family: 'Baloo';
+  color: white;
+}
+
+p {
+  font-family: 'Signika';
+  font-weight: '400';
+  color: white;
+}
+body {
+  background-position: center center;
+  background-size: cover;
+  background-color:rgba(0, 0, 0, 0.3);
+  background: {
+    color: rgba(0, 0, 0, 0.3);
+    image: asset-url("marathon.jpg");
+  }
+}
