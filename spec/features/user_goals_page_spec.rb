@@ -22,12 +22,12 @@ describe "UserGoal" do
     expect(page).to have_content "2 points was received."
   end
 
-  it "is destroyed when deleted" do
-    visit user_goal_path(@ug)
+  #it "is destroyed when deleted" do
+  #  visit user_goal_path(@ug)
 
-    click_link "Destroy"
+  #  click_link "Destroy"
 
-    expect(UserGoal.count).to eq(0)
-    expect(page).to have_content "Your goal was successfully destroyed."
-  end
+  #  expect(UserGoal.count).to eq(0)
+  #  expect(page).to have_content "Your goal was successfully destroyed."
+  #end
 end
