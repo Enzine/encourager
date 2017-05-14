@@ -4,21 +4,28 @@
 <%= @user_goal.goal.description %>
 <br><br>
 
-This goal was achieved in <%= @user_goal.created_at.strftime("%d %b. %Y") %>.
-You received <%= pluralize(@user_goal.goal.score, 'point') %>.
+This goal was achieved in <%= @user_goal.created_at.strftime("%d %b. %Y") %> and
+<%= pluralize(@user_goal.goal.score, 'point') %> was received.
 
-<% if @user_goal.stars.nil? %>
-  You haven't rated this achievement yet.<br>
-  <b>Rate it <i><%= link_to 'here', edit_user_goal_path(@user_goal) %></i></b>.
-<% else %>
-  You gave your performance <%= @user_goal.stars %> stars.
-  <% unless @user_goal.comments.nil? %>
-    Your comment was: <br>
-    <i>"<%= @user_goal.comments %>"</i>
+<% if current_user == @user_goal.user %>
+  <% if @user_goal.stars.nil? %>
+    You haven't rated this achievement yet.<br>
+    <b>Rate it <i><%= link_to 'here', edit_user_goal_path(@user_goal) %></i></b>.
+  <% else %>
+    You gave your performance <%= pluralize(@user_goal.stars, 'star') %>.
+    <% unless @user_goal.comments.nil? %>
+      Your comment was: <br>
+      <i>"<%= @user_goal.comments %>"</i>
+    <% end %>
   <% end %>
+<% else %>
+  <br><br><%= @user_goal.user.username %>'s comment was:
+    <i>"<%= @user_goal.comments %>"</i><br><br>
+    <%= link_to @user_goal.user.username + "'s profile", @user_goal.user %>
 <% end %>
+
 <br><br>
 <% if current_user == @user_goal.user %>
-  <%= link_to 'Edit', edit_user_goal_path(@user_goal), class: 'button alert' %> 
+  <%= link_to 'Edit', edit_user_goal_path(@user_goal), class: 'button alert' %>
   <%= link_to 'Destroy', @user_goal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button warning' %>
 <% end %>

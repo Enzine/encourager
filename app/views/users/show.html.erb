@@ -21,7 +21,7 @@
       <h5>Recent goals:</h5>
       <% @user.recent_goals.each do |user_goal| %>
         <%= link_to user_goal.goal.name, user_goal_path(user_goal) %>, <%= user_goal.created_at.strftime("%d %b. %Y") %>
-        <% if current_user %>
+        <% if current_user == @user %>
           <%= link_to 'remove', user_goal, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %> (<%= user_goal.goal.score %> points)<br>
       <% end %>

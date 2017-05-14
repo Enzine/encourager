@@ -1,6 +1,7 @@
 class UserGoalsController < ApplicationController
   before_action :set_user_goal, only: [:show, :edit, :update, :destroy]
   before_action :ensure_that_signed_in
+  before_action :ensure_permission, only: [:new, :edit, :create, :update, :destroy]
 
   # GET /user_goals
   # GET /user_goals.json
@@ -20,6 +21,7 @@ class UserGoalsController < ApplicationController
 
   # GET /user_goals/1/edit
   def edit
+    ensure_permission
   end
 
   # POST /user_goals
@@ -29,7 +31,7 @@ class UserGoalsController < ApplicationController
 
     respond_to do |format|
       if @user_goal.save
-        format.html { redirect_to @user_goal, notice: 'User goal was successfully created.' }
+        format.html { redirect_to @user_goal, notice: 'Your goal was successfully checked.' }
         format.json { render :show, status: :created, location: @user_goal }
       else
         format.html { render :new }
@@ -43,7 +45,7 @@ class UserGoalsController < ApplicationController
   def update
     respond_to do |format|
       if @user_goal.update(user_goal_params)
-        format.html { redirect_to @user_goal, notice: 'User goal was successfully updated.' }
+        format.html { redirect_to @user_goal, notice: 'Your goal was successfully updated.' }
         format.json { render :show, status: :ok, location: @user_goal }
       else
         format.html { render :edit }
@@ -71,5 +73,12 @@ class UserGoalsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_goal_params
       params.require(:user_goal).permit(:user_id, :goal_id, :stars, :comments)
+    end
+
+    def ensure_permission
+      set_user_goal
+      unless current_user == @user_goal.user
+        redirect_to current_user, notice: "You don't have a permission to do that."
+      end
     end
 end

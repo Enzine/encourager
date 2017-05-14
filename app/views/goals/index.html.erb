@@ -19,6 +19,9 @@
         <h1><%= goal.score %></h1>
         <div class="card-section">
           <%= goal.description %><br><br>
+          <% unless goal.tag_list == "" %>
+            <i><%= goal.tag_list %></i><br><br>
+          <% end %>
         </div>
       </div>
     </div>

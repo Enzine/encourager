@@ -5,7 +5,11 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    @goals = Goal.order(:score)
+    @goals = if params[:tag]
+      Goal.tagged_with(params[:tag]).order(:score)
+    else
+      @goals = Goal.order(:score)
+    end
   end
 
   # GET /goals/1
@@ -40,7 +44,7 @@ class GoalsController < ApplicationController
 
   # PATCH/PUT /goals/1
   # PATCH/PUT /goals/1.json
-  def update
+  def update    
     respond_to do |format|
       if @goal.update(goal_params)
         format.html { redirect_to @goal, notice: 'Goal was successfully updated.' }
@@ -84,6 +88,6 @@ class GoalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def goal_params
-      params.require(:goal).permit(:name, :score, :description)
+      params.require(:goal).permit(:name, :score, :description, :tag_list)
     end
 end

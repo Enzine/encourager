@@ -23,5 +23,9 @@
     <%= f.label :description %>
     <%= f.text_area :description %>
 
+    Add tags to help others find your goals.
+    <%= f.label :tag_list %>
+    <%= f.text_field :tag_list, placeholder: "Tags separated with comma" %>
+
     <%= f.submit class: 'button' %>
 <% end %>
