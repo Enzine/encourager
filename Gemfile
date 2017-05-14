@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 
@@ -16,13 +11,11 @@ group :production do
 end
 
 # For coveralls.io (testing line coverage)
-gem 'coveralls', require: false
+gem 'coveralls', require: false##############
 
 # For Foundation Framework
 gem 'foundation-rails'
 
-# Use Puma as the app server
-gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -51,6 +44,7 @@ gem 'bcrypt', '~> 3.1.11'
 # HTTP for APIs.
 gem 'httparty'
 
+gem 'database_cleaner'
 gem "binding_of_caller"
 
 group :development do
@@ -75,17 +69,20 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-rails'
-end
-
-group :development, :test do
-  gem "database_cleaner"
-  gem "rspec-rails"
-  gem 'factory_girl_rails'
-  gem "capybara"
+  #for javascript to work with capybara
   gem "selenium-webdriver"
 end
 
-gem 'simplecov', require: false
+group :development, :test do
+  gem "rspec-rails"
+end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem "webmock"
+end
+
+gem 'rspec-its'
+gem 'simplecov', require: false

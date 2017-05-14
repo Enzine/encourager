@@ -1,11 +1,5 @@
 require 'simplecov'
-require 'coveralls'
-Coveralls.wear!('rails')
-
-SimpleCov.formatter = Coveralls::SimpleCov::Formatter
-SimpleCov.start do
-  add_filter 'app/secrets'
-end
+SimpleCov.start('rails')
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
@@ -15,7 +9,6 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rspec'
-
 
 #this is just a cheat for making tests/specs. This doesn't belong in this file.
   #RSpec.describe "Signing in", js: true do
