@@ -10,10 +10,6 @@ gem 'rails', '~> 5.0.1'
 
 ruby '2.3.1'
 
-group :development, :test do
-  gem 'sqlite3'
-end
-
 group :production do
    gem 'pg'
    gem 'rails_12factor'
@@ -55,17 +51,6 @@ gem 'bcrypt', '~> 3.1.11'
 # HTTP for APIs.
 gem 'httparty'
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  gem 'pry-rails'  # lisää siis tämä rivi!
-end
-
-#better errors in the browser
-group :development, :test do
-  gem "better_errors"
-end
-
 gem "binding_of_caller"
 
 group :development do
@@ -78,11 +63,23 @@ group :development do
 end
 
 group :development, :test do
-  gem "database_cleaner"
-  gem "rspec-rails"
+  gem 'sqlite3'
 end
 
-group :test do
+#better errors in the browser
+group :development, :test do
+  gem "better_errors"
+end
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+  gem 'pry-rails'
+end
+
+group :development, :test do
+  gem "database_cleaner"
+  gem "rspec-rails"
   gem 'factory_girl_rails'
   gem "capybara"
   gem "selenium-webdriver"
