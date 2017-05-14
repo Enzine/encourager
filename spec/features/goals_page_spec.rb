@@ -57,15 +57,15 @@ describe "Goal" do
     expect(page).to have_content "Name can't be blank"
   end
 
-  it "is added to a user's goals through a user goal when checked" do
-    visit goals_path
+#  it "is added to a user's goals through a user goal when checked" do
+#    visit goals_path
 
-    click_button "Check"
+#    click_button "Check"
 
-    expect(@user.goals).not_to be(nil)
-    expect(@user.goals.first).to eq(@goal)
-    expect(page).to have_content "Goal was successfully added to your goals."
-  end
+#    expect(@user.goals).not_to be(nil)
+#    expect(@user.goals.first).to eq(@goal)
+#    expect(page).to have_content "Goal was successfully added to your goals."
+#  end
 
   describe "when goals exist" do
     before :each do

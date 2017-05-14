@@ -5,6 +5,12 @@ FactoryGirl.define do
     password_confirmation "Passwor1"
   end
 
+  factory :user2, class: User do
+    username "Heikki"
+    password "Passwor1"
+    password_confirmation "Passwor1"
+  end
+
   factory :goal do
     name "goal"
     score 2

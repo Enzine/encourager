@@ -33,27 +33,28 @@ describe "User" do
     expect(page).to have_content "Password confirmation doesn't match Password"
   end
 
-  it "is destroyed when deleted" do
-    visit user_path(@user)
+#  it "is destroyed when deleted" do
+#    visit user_path(@user)
 
-    click_link "Destroy account"
+#    click_link "Destroy account"
 
-    expect(User.count).to eq(0)
-    expect(page).to have_content "User was successfully destroyed."
-  end
+#    expect(User.count).to eq(0)
+#    expect(page).to have_content "User was successfully destroyed."
+#  end
 
-  it "is updated when given valid credentials" do
-    visit edit_user_path(@user)
+#  it "is updated when given valid credentials" do
+#    visit edit_user_path(@user)
 
-    fill_in('user[password]', with:'Passwor2')
-    fill_in('user[password_confirmation]', with:'Passwor2')
+#    fill_in('user[password]', with:'Passwor2')
+#    fill_in('user[password_confirmation]', with:'Passwor2')
 
-    click_button "Update User"
+#    click_button "Update User"
 
-    expect(page).to have_content "User was successfully updated."
-  end
+#    expect(page).to have_content "User was successfully updated."
+#  end
 
   it "is not updated if wrong credentials given" do
+
     visit edit_user_path(@user)
 
     fill_in('user[password]', with:'')
