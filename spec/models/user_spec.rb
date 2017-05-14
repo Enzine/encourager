@@ -7,6 +7,14 @@ RSpec.describe User, type: :model do
     expect(user.username).to eq "Pekka"
   end
 
+  it "is not saved if the username has been taken" do
+    user = User.create username:"Pekka", password:"Passwor1", password_confirmation:"Passwor1"
+    user2 = User.create username:"Pekka", password:"Passwor1", password_confirmation:"Passwor1"
+
+    expect(user2).not_to be_valid
+    expect(User.count).to eq(1)
+  end
+
   it "is not saved without a password" do
     user = User.create username:"Pekka"
 
@@ -37,7 +45,7 @@ RSpec.describe User, type: :model do
 
   describe "score" do
     it "has a method score" do
-      user = User.new username:"Pekka"
+      user = User.new
       expect(user).to respond_to(:score)
     end
 

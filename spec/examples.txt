@@ -1,13 +1,28 @@
-example_id                         | status  | run_time        |
----------------------------------- | ------- | --------------- |
-./spec/models/tag_spec.rb[1:1]     | pending | 0.00001 seconds |
-./spec/models/tagging_spec.rb[1:1] | pending | 0.00002 seconds |
-./spec/models/user_spec.rb[1:1]    | passed  | 0.01212 seconds |
-./spec/models/user_spec.rb[1:2]    | passed  | 0.00543 seconds |
-./spec/models/user_spec.rb[1:3]    | passed  | 0.01744 seconds |
-./spec/models/user_spec.rb[1:4]    | passed  | 0.00562 seconds |
-./spec/models/user_spec.rb[1:5]    | passed  | 0.00775 seconds |
-./spec/models/user_spec.rb[1:6:1]  | passed  | 0.00234 seconds |
-./spec/models/user_spec.rb[1:6:2]  | passed  | 0.01744 seconds |
-./spec/models/user_spec.rb[1:6:3]  | passed  | 0.06494 seconds |
-./spec/models/user_spec.rb[1:6:4]  | passed  | 0.0241 seconds  |
+example_id                           | status  | run_time        |
+------------------------------------ | ------- | --------------- |
+./spec/models/goal_spec.rb[1:1]      | passed  | 0.01239 seconds |
+./spec/models/goal_spec.rb[1:2]      | passed  | 0.0056 seconds  |
+./spec/models/goal_spec.rb[1:3]      | passed  | 0.00481 seconds |
+./spec/models/goal_spec.rb[1:4]      | passed  | 0.00269 seconds |
+./spec/models/goal_spec.rb[1:5]      | passed  | 0.00731 seconds |
+./spec/models/goal_spec.rb[1:6]      | passed  | 0.00282 seconds |
+./spec/models/goal_spec.rb[1:7]      | passed  | 0.01259 seconds |
+./spec/models/goal_spec.rb[1:8]      | passed  | 0.00354 seconds |
+./spec/models/goal_spec.rb[1:9:1]    | passed  | 0.00668 seconds |
+./spec/models/goal_spec.rb[1:9:2]    | passed  | 0.05973 seconds |
+./spec/models/goal_spec.rb[1:9:3]    | passed  | 0.02283 seconds |
+./spec/models/goal_spec.rb[1:9:4]    | passed  | 0.02721 seconds |
+./spec/models/tag_spec.rb[1:1]       | pending | 0.00001 seconds |
+./spec/models/tagging_spec.rb[1:1]   | pending | 0.00002 seconds |
+./spec/models/user_goal_spec.rb[1:1] | passed  | 0.01232 seconds |
+./spec/models/user_goal_spec.rb[1:2] | passed  | 0.01732 seconds |
+./spec/models/user_spec.rb[1:1]      | passed  | 0.00237 seconds |
+./spec/models/user_spec.rb[1:2]      | passed  | 0.01534 seconds |
+./spec/models/user_spec.rb[1:3]      | passed  | 0.00983 seconds |
+./spec/models/user_spec.rb[1:4]      | passed  | 0.02564 seconds |
+./spec/models/user_spec.rb[1:5]      | passed  | 0.00961 seconds |
+./spec/models/user_spec.rb[1:6]      | passed  | 0.0117 seconds  |
+./spec/models/user_spec.rb[1:7:1]    | passed  | 0.00166 seconds |
+./spec/models/user_spec.rb[1:7:2]    | passed  | 0.01497 seconds |
+./spec/models/user_spec.rb[1:7:3]    | passed  | 0.03437 seconds |
+./spec/models/user_spec.rb[1:7:4]    | passed  | 0.0226 seconds  |
