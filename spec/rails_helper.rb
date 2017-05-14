@@ -9,8 +9,6 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rspec'
-require 'helpers'
-require 'webmock/rspec'
 
 
 #this is just a cheat for making tests/specs. This doesn't belong in this file.
