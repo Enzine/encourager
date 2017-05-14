@@ -1,3 +1,5 @@
+require 'quote'
+
 class QuoteApi
 
   def self.fetch_quote

@@ -1,4 +1,5 @@
 require 'quote_api'
+require 'weather_api'
 
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
