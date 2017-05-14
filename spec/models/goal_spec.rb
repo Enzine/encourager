@@ -58,33 +58,31 @@ RSpec.describe Goal, type: :model do
   end
 
   describe "tag_list" do
-    it "has a methos tag_list" do
-      goal = Goal.create
+    before :each do
+      @goal = FactoryGirl.create(:goal)
+      @tag = FactoryGirl.create(:tag)
+      @tag2 = FactoryGirl.create(:tag2)
+      @tagging = Tagging.create tag_id:@tag.id, goal_id:@goal.id
+    end
 
-      expect(goal).to respond_to(:tag_list)
+    it "has a method tag_list" do
+      expect(@goal).to respond_to(:tag_list)
     end
 
     it "with 1 tag, tag_list returns that tag's name" do
-      goal = Goal.create name:"goal", score:2
-      tag = Tag.create name:"tag"
-      tagging = Tagging.create tag_id:tag.id, goal_id:goal.id
-      expect(goal.tag_list).to eq "tag"
+      expect(@goal.tag_list).to eq "tag"
     end
 
     it "with 2 tags, tag_list returns tags' names divided by comma" do
-      goal = Goal.create name:"goal", score:2
-      tag = Tag.create name:"tag"
-      tag2 = Tag.create name:"tag2"
-      tagging = Tagging.create tag_id:tag.id, goal_id:goal.id
-      tagging2 = Tagging.create tag_id:tag2.id, goal_id:goal.id
-      expect(goal.tag_list).to eq "tag, tag2"
+      tagging2 = Tagging.create tag_id:@tag2.id, goal_id:@goal.id
+      expect(@goal.tag_list).to eq "tag, tag2"
     end
 
     it "tags can be added with tag_list" do
-      goal = Goal.create name:"goal", score:2
-      goal.tag_list = "tag, tag2, tag3"
+      @goal = Goal.create name:"goal", score:2
+      @goal.tag_list = "tag, tag2, tag3"
 
-      expect(goal.tag_list).to eq "tag, tag2, tag3"
+      expect(@goal.tag_list).to eq "tag, tag2, tag3"
     end
   end
 end
