@@ -12,12 +12,11 @@
   <% end %>
   <div align="right">
     <h3>Quote of the day</h3>
-    <% q = QuoteApi.fetch_quote %>
-    <i><font size="+2">"</font><%= q.text %><font size="+2">"</font></i><br>
-    ~ <% if q.author.nil? %>
+    <i><font size="+2">"</font><%= @todays_quote.text %><font size="+2">"</font></i><br>
+    ~ <% if @todays_quote.author.nil? %>
       anonymous
       <% else %>
-        <%= link_to q.author["name"], q.author["wiki"] %>
+        <%= link_to @todays_quote.author["name"], @todays_quote.author["wiki"] %>
       <% end %>
   </div>
 </div>

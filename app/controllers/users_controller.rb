@@ -1,3 +1,5 @@
+require 'quote_api'
+
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :ensure_that_signed_in, only: [:destroy, :edit, :update]
@@ -66,6 +68,7 @@ class UsersController < ApplicationController
   end
 
   def home
+    @todays_quote = QuoteApi.fetch_quote
   end
 
   private
