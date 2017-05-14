@@ -19,7 +19,7 @@ class User < ApplicationRecord
   end
 
   def top_goal
-    #most times checked
+    # most times checked
   end
 
 end

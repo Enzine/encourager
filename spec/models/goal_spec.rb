@@ -62,7 +62,7 @@ RSpec.describe Goal, type: :model do
       @goal = FactoryGirl.create(:goal)
       @tag = FactoryGirl.create(:tag)
       @tag2 = FactoryGirl.create(:tag2)
-      @tagging = Tagging.create tag_id:@tag.id, goal_id:@goal.id
+      Tagging.create tag_id:@tag.id, goal_id:@goal.id
     end
 
     it "has a method tag_list" do
@@ -74,7 +74,7 @@ RSpec.describe Goal, type: :model do
     end
 
     it "with 2 tags, tag_list returns tags' names divided by comma" do
-      tagging2 = Tagging.create tag_id:@tag2.id, goal_id:@goal.id
+      Tagging.create tag_id:@tag2.id, goal_id:@goal.id
       expect(@goal.tag_list).to eq "tag, tag2"
     end
 

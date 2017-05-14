@@ -5,10 +5,11 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    @goals = if params[:tag]
+    @goals =
+    if params[:tag]
       Goal.tagged_with(params[:tag]).order(:score)
     else
-      @goals = Goal.order(:score)
+      Goal.order(:score)
     end
   end
 
@@ -44,7 +45,7 @@ class GoalsController < ApplicationController
 
   # PATCH/PUT /goals/1
   # PATCH/PUT /goals/1.json
-  def update    
+  def update
     respond_to do |format|
       if @goal.update(goal_params)
         format.html { redirect_to @goal, notice: 'Goal was successfully updated.' }

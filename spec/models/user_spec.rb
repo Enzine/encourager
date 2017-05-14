@@ -51,15 +51,15 @@ RSpec.describe User, type: :model do
     end
 
     it "with 1 goal checked, score returns that goal's points" do
-      ug = UserGoal.create goal_id:@goal.id, user_id:@user.id
+      UserGoal.create goal_id:@goal.id, user_id:@user.id
 
       expect(@user.score).to eq(2)
     end
 
     it "with 2 of the same goal checked, score return the sum of the goal points" do
       goal2 = FactoryGirl.create(:goal)
-      ug1 = UserGoal.create goal_id:@goal.id, user_id:@user.id
-      ug2 = UserGoal.create goal_id:goal2.id, user_id:@user.id
+      UserGoal.create goal_id:@goal.id, user_id:@user.id
+      UserGoal.create goal_id:goal2.id, user_id:@user.id
 
       expect(@user.score).to eq(4)
     end

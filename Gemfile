@@ -60,7 +60,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-#better errors in the browser
+# better errors in the browser
 group :development, :test do
   gem "better_errors"
 end
@@ -69,7 +69,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-rails'
-  #for javascript to work with capybara
+  # for javascript to work with capybara
   gem "selenium-webdriver"
 end
 

@@ -10,10 +10,10 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rspec'
 
-#this is just a cheat for making tests/specs. This doesn't belong in this file.
-  #RSpec.describe "Signing in", js: true do
+# this is just a cheat for making tests/specs. This doesn't belong in this file.
+  # RSpec.describe "Signing in", js: true do
     # here tests that actually execute JavaScript
-  #end
+  # end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
