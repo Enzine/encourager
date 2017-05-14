@@ -3,4 +3,4 @@
 Tested models.
 Didn't test controllers or views.
 
-(Some capybara tests done after deadline)
+(Some capybara tests done after deadline. Left out API-testing completely.)
