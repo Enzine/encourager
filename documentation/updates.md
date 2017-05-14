@@ -26,3 +26,5 @@ When | What | Time spent
 12.5.2017 | Some fixes and fighting with sass. | 2h
 13.5.2017 | Documentation ready for the final release (except for the testing principles). Tags are back! | 2,5h
 14.5.2017 | Fixed things, created tests and made things ready. | 5,5h
+END | END | END
+15.5.2017 | Stuff. | ?h
