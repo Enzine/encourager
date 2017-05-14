@@ -7,16 +7,17 @@
     </p>
   <% else %>
     <p>Encourager is created to bring us motivation and
-      inspiration through an active lifestyle. Sharing Encourager-experience
-      with friends and family will make it more enjoyable. Register FREE
-      today and begin your journey towards better results!
+      inspiration through an active lifestyle.
     </p>
-    <h4>with Love and Respect,<br>
-      Your Encourager</h4>
   <% end %>
-
-  <h3>Quote of the day</h3>
-  <% q = QuoteApi.fetch_quote %>
-  <i><font size="+2">"</font><%= q.text %><font size="+2">"</font></i><br>
-  ~ <%= link_to q.author["name"], q.author["wiki"] %>
+  <div align="right">
+    <h3>Quote of the day</h3>
+    <% q = QuoteApi.fetch_quote %>
+    <i><font size="+2">"</font><%= q.text %><font size="+2">"</font></i><br>
+    ~ <% if q.author.nil? %>
+      anonymous
+      <% else %>
+        <%= link_to q.author["name"], q.author["wiki"] %>
+      <% end %>
+  </div>
 </div>
