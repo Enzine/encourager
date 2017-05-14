@@ -1,4 +1,3 @@
-require 'quote_api'
 require 'weather_api'
 
 class UsersController < ApplicationController
@@ -66,10 +65,6 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-
-  def home
-    @todays_quote = QuoteApi.fetch_quote
   end
 
   private

@@ -6,7 +6,6 @@
       <%= link_to "change activity", toggle_activity_user_path(@user.id), method: :post, class: "button small" %>
     <% end %>
   </h1>
-  <br>
   <% if current_user == @user %>
     <% if @user.score == 0 %>
       You get points by clicking 'Check' on goals that you've achieved. Do it <%= link_to 'here', goals_path %>.<br><br>
