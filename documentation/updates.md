@@ -23,3 +23,6 @@ When | What | Time spent
 1.5.2017 | Worked with testing, admin-priviledges and some new features. Altered forms and layout. | 4,5h
 2.5.2017 | WeatherApi and day's quote added. Also tweaked the home page ui. Familiarized with Google fonts. | 2h
 4.5.2017 | Fixed specs not-working. Issue was with cache. | 1,5h
+12.5.2017 | Some fixes and fighting with sass. | 2h
+13.5.2017 | Documentation ready for the final release (except for the testing principles). Tags are back! | 2,5h
+14.5.2017 | Fixed things, created tests and made things ready. | 5,5h
