@@ -30,11 +30,15 @@
     <div class="small-4 columns">
       <h3>Your city information</h3>
       <%= @user.city %><br>
-      <%= @weather[:temperature] %>&degC ~ <%= @weather[:text] %> weather<br>
-      <img src="<%= @weather[:icon] %>"/><br>
-      Feels like <%= @weather[:feelslike] %>&degC.<br>
-      Humidity: <%= @weather[:humidity] %><br>
-      Wind conditions: <%= (@weather[:wind]*1000/60/60).round(2) %> m / s.
+      <% if @weather.nil? %>
+        No weather information from your city.
+      <% else %>
+        <%= @weather[:temperature] %>&degC ~ <%= @weather[:text] %> weather<br>
+        <img src="<%= @weather[:icon] %>"/><br>
+        Feels like <%= @weather[:feelslike] %>&degC.<br>
+        Humidity: <%= @weather[:humidity] %><br>
+        Wind conditions: <%= (@weather[:wind]*1000/60/60).round(2) %> m / s.
+      <% end %>
     </div>
     <div class="small-3 columns" align="center">
       <h3>TOTAL SCORE</h3>
