@@ -35,5 +35,37 @@ RSpec.describe User, type: :model do
     expect(User.count).to eq(1)
   end
 
+  describe "score" do
+    it "has a method score" do
+      user = User.new username:"Pekka"
+      expect(user).to respond_to(:score)
+    end
 
+    it "with 1 goal checked, score returns that goal's points" do
+      user = User.create username:"Pekka", password:"Passwor1", password_confirmation:"Passwor1"
+      goal = Goal.create name:"goal", score:2
+      ug = UserGoal.create goal_id:goal.id, user_id:user.id
+
+      expect(user.score).to eq(2)
+    end
+
+    it "with 2 of the same goal checked, score return the sum of the goal points" do
+      user = User.create username:"Pekka", password:"Passwor1", password_confirmation:"Passwor1"
+      goal = Goal.create name:"goal", score:2
+      ug1 = UserGoal.create goal_id:goal.id, user_id:user.id
+      ug2 = UserGoal.create goal_id:goal.id, user_id:user.id
+
+      expect(user.score).to eq(4)
+    end
+
+    it "with 2 different goals checked, score return the sum of the goal points" do
+      user = User.create username:"Pekka", password:"Passwor1", password_confirmation:"Passwor1"
+      goal = Goal.create name:"goal", score:2
+      goal2 = Goal.create name:"goal2", score:5
+      ug1 = UserGoal.create goal_id:goal.id, user_id:user.id
+      ug2 = UserGoal.create goal_id:goal2.id, user_id:user.id
+
+      expect(user.score).to eq(7)
+    end
+  end
 end

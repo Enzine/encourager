@@ -1,7 +1,13 @@
-example_id                      | status | run_time        |
-------------------------------- | ------ | --------------- |
-./spec/models/user_spec.rb[1:1] | passed | 0.00096 seconds |
-./spec/models/user_spec.rb[1:2] | passed | 0.01518 seconds |
-./spec/models/user_spec.rb[1:3] | passed | 0.00597 seconds |
-./spec/models/user_spec.rb[1:4] | passed | 0.00957 seconds |
-./spec/models/user_spec.rb[1:5] | passed | 0.02275 seconds |
+example_id                         | status  | run_time        |
+---------------------------------- | ------- | --------------- |
+./spec/models/tag_spec.rb[1:1]     | pending | 0.00001 seconds |
+./spec/models/tagging_spec.rb[1:1] | pending | 0.00002 seconds |
+./spec/models/user_spec.rb[1:1]    | passed  | 0.01212 seconds |
+./spec/models/user_spec.rb[1:2]    | passed  | 0.00543 seconds |
+./spec/models/user_spec.rb[1:3]    | passed  | 0.01744 seconds |
+./spec/models/user_spec.rb[1:4]    | passed  | 0.00562 seconds |
+./spec/models/user_spec.rb[1:5]    | passed  | 0.00775 seconds |
+./spec/models/user_spec.rb[1:6:1]  | passed  | 0.00234 seconds |
+./spec/models/user_spec.rb[1:6:2]  | passed  | 0.01744 seconds |
+./spec/models/user_spec.rb[1:6:3]  | passed  | 0.06494 seconds |
+./spec/models/user_spec.rb[1:6:4]  | passed  | 0.0241 seconds  |

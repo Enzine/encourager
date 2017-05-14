@@ -1,31 +1,21 @@
-This is an application for excercise motivation.
-Users may register and collect points from various activities.
-Activities are added by users.
-Each activity has a point score.
-When a user finished an activity or goal, score is added to user's scoreboard.
-With score, may users achieve something (not decided yet).
-Score brings motivation.
-Users may see other user's profiles.
-There could be statistics on the profile page.
+### What is Encourager?
 
-In the beginning a user may choose an achievement (text based).
+Encourager is a web application for excercise motivation. It helps keep track of excercises done.
+A user may register and collect points from various activities. He can also add goals for others to do. Each activity has a point score and one goal can be done as many times as a user wants. When checking the goal a user can rate his performance and write down how he felt about the goal. The score brings motivation, especially when Encourager is used with friends and family. Users may see each other's profiles.
+
+
+Left out for now / possible future adds and updates:
+
+With score, may users achieve something (not yet decided what).
+There are statistics (charts etc.) on the profile page.
+A user may choose an achievement (text based).
+A registration must be granted by an admin before the user may use his account.
 Achievements developement is shown on the user page as a list.
 When an achievement is done, the user may get a badge as proof (a picture/logo).
 
 Possible achievements:
 - Raise a puppy / kitten
 - Develope your village's population to x
-
-Activity/Goal
-- score:interger
-- name:string
-- description:text
-
-User
-- username:string
-
-UserGoal
-- new usergoal is created when a user adds a goal to her goals
 
 Achievement
 - name:string
