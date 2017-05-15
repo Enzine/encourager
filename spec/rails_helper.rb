@@ -1,11 +1,6 @@
 require 'simplecov'
 require 'coveralls'
-Coveralls.wear!('rails')
-
-SimpleCov.formatter = Coveralls::SimpleCov::Formatter
-SimpleCov.start do
-  add_filter 'app/secrets'
-end
+SimpleCov.start('rails')
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'

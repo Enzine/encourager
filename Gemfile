@@ -11,7 +11,7 @@ group :production do
 end
 
 # For coveralls.io (testing line coverage)
-gem 'coveralls', require: false##############
+gem 'coveralls', require: false
 
 # For Foundation Framework
 gem 'foundation-rails'
